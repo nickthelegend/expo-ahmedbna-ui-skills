@@ -10,6 +10,71 @@ The authoritative resource for building high-quality mobile applications with Ex
 npx skills add nickthelegend/expo-ahmedbna-ui-skills
 ```
 
+## 🚀 Installation
+
+Add this collection to your project using the `agent-skills` CLI:
+
+```bash
+npx skills add nickthelegend/expo-ahmedbna-ui-skills --all
+```
+
+### Peer Dependencies
+Ensure your Expo project has the following installed:
+
+```bash
+npx expo install react-native-reanimated lucide-react-native expo-haptics expo-audio
+```
+
+---
+
+## ⚙️ Configuration
+
+### 1. Project Structure
+The skills will be installed into your `@/components/ui` directory by default. Ensure your `tsconfig.json` or `jsconfig.json` has the `@` alias configured:
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["*"]
+    }
+  }
+}
+```
+
+### 2. Theming
+This collection uses a robust, token-based theming system. 
+- **Colors**: Customize your brand colors in `hooks/useColor.ts` or the provided `theme/colors.ts`.
+- **Hooks**: Use `useColor`, `useColorScheme`, and `useModeToggle` to handle dynamic themes effortlessly.
+
+---
+
+## 📖 Usage
+
+Once installed, simply import and use the components in your Expo screens:
+
+```tsx
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Mail } from 'lucide-react-native';
+
+export default function MyScreen() {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Contact Support</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Button icon={Mail} onPress={() => {}}>
+          Send Email
+        </Button>
+      </CardContent>
+    </Card>
+  );
+}
+```
+
 ---
 
 ## 🏛️ Skills Directory (77 Total)
