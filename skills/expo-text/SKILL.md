@@ -14,6 +14,8 @@ A high-performance text component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { useColor } from '@/hooks/useColor';
 import { FONT_SIZE } from '@/theme/globals';
@@ -56,52 +58,8 @@ export const Text = forwardRef<RNText, TextProps>(
         case 'heading':
           return {
             ...baseStyle,
-            fontSize: 28,
-            fontWeight: '800',
-          };
-        case 'title':
-          return {
-            ...baseStyle,
-            fontSize: 24,
-            fontWeight: '700',
-          };
-        case 'subtitle':
-          return {
-            ...baseStyle,
-            fontSize: 19,
-            fontWeight: '600',
-          };
-        case 'caption':
-          return {
-            ...baseStyle,
-            fontSize: FONT_SIZE,
-            fontWeight: '400',
-            color: mutedColor,
-          };
-        case 'link':
-          return {
-            ...baseStyle,
-            fontSize: FONT_SIZE,
-            fontWeight: '500',
-            textDecorationLine: 'underline',
-          };
-        default: // 'body'
-          return {
-            ...baseStyle,
-            fontSize: FONT_SIZE,
-            fontWeight: '400',
-          };
-      }
-    };
-
-    return (
-      <RNText ref={ref} style={[getTextStyle(), style]} {...props}>
-        {children}
-      </RNText>
-    );
-  }
-);
-
+      
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -134,4 +92,4 @@ export function TextDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this text implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

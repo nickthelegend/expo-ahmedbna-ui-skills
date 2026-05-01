@@ -14,6 +14,8 @@ A high-performance switch component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { useColor } from '@/hooks/useColor';
 import React from 'react';
@@ -51,49 +53,8 @@ export function Switch({ label, error, labelStyle, ...props }: SwitchProps) {
           <Text
             variant='caption'
             numberOfLines={2} // Allow wrapping for longer labels
-            ellipsizeMode='tail'
-            style={[
-              {
-                color: error ? danger : primary,
-                flex: 1, // Take available space
-                marginRight: 12, // Add spacing between label and switch
-              },
-              labelStyle,
-            ]}
-            pointerEvents='none'
-          >
-            {label}
-          </Text>
-        )}
-
-        <RNSwitch
-          trackColor={{ false: mutedColor, true: '#7DD87D' }}
-          thumbColor={props.value ? '#ffffff' : '#f4f3f4'}
-          {...props}
-        />
-      </View>
-
-      {error && (
-        <Text
-          variant='caption'
-          numberOfLines={2}
-          ellipsizeMode='tail'
-          style={[
-            {
-              fontSize: 12, // Slightly smaller for error text
-              color: danger, // Always use danger color for errors
-              marginTop: 4, // Add spacing above error text
-            },
-          ]}
-          pointerEvents='none'
-        >
-          {error}
-        </Text>
-      )}
-    </View>
-  );
-}
-
+        
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -121,4 +82,4 @@ export function SwitchDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this switch implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

@@ -14,6 +14,8 @@ A high-performance radio component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { Text } from '@/components/ui/text';
 import { useColor } from '@/hooks/useColor';
@@ -56,99 +58,8 @@ export function RadioButton({
   labelStyle,
 }: RadioButtonProps) {
   const primaryColor = useColor('primary');
-  const borderColor = useColor('border');
-  const textColor = useColor('text');
-  const mutedColor = useColor('textMuted');
-
-  const isDisabled = disabled || option.disabled;
-
-  const radioButtonStyle: ViewStyle = {
-    width: BORDER_RADIUS,
-    height: BORDER_RADIUS,
-    borderRadius: CORNERS,
-    borderWidth: 1.5,
-    borderColor: selected ? primaryColor : borderColor,
-    backgroundColor: 'transparent',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 12,
-  };
-
-  const innerCircleStyle: ViewStyle = {
-    width: 16,
-    height: 16,
-    borderRadius: CORNERS,
-    backgroundColor: selected ? primaryColor : 'transparent',
-  };
-
-  const containerStyle: ViewStyle = {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 4,
-    paddingHorizontal: 4,
-    opacity: isDisabled ? 0.5 : 1,
-  };
-
-  const textStyle: TextStyle = {
-    color: isDisabled ? mutedColor : textColor,
-    fontSize: FONT_SIZE,
-    fontWeight: '400',
-    lineHeight: 24,
-  };
-
-  return (
-    <TouchableOpacity
-      style={[containerStyle, style]}
-      onPress={onPress}
-      disabled={isDisabled}
-      activeOpacity={0.7}
-    >
-      <View style={radioButtonStyle}>
-        <View style={innerCircleStyle} />
-      </View>
-      <Text style={[textStyle, labelStyle]}>{option.label}</Text>
-    </TouchableOpacity>
-  );
-}
-
-export function RadioGroup({
-  options,
-  value,
-  onValueChange,
-  disabled = false,
-  orientation = 'vertical',
-  style,
-  optionStyle,
-  labelStyle,
-}: RadioGroupProps) {
-  const containerStyle: ViewStyle = {
-    flexDirection: orientation === 'horizontal' ? 'row' : 'column',
-    gap: orientation === 'horizontal' ? 16 : 4,
-  };
-
-  const handlePress = (optionValue: string) => {
-    if (onValueChange && !disabled) {
-      onValueChange(optionValue);
-    }
-  };
-
-  return (
-    <View style={[containerStyle, style]}>
-      {options.map((option) => (
-        <RadioButton
-          key={option.value}
-          option={option}
-          selected={value === option.value}
-          onPress={() => handlePress(option.value)}
-          disabled={disabled}
-          style={optionStyle}
-          labelStyle={labelStyle}
-        />
-      ))}
-    </View>
-  );
-}
-
+  const
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -180,4 +91,4 @@ export function RadioDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this radio implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

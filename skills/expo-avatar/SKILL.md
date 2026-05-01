@@ -14,6 +14,8 @@ A high-performance avatar component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { Image } from '@/components/ui/image';
 import { Text } from '@/components/ui/text';
@@ -54,52 +56,8 @@ interface AvatarImageProps {
 }
 
 export function AvatarImage({ source, style }: AvatarImageProps) {
-  return <Image source={source} style={[style]} />;
-}
-
-interface AvatarFallbackProps {
-  children: React.ReactNode;
-  style?: ViewStyle;
-  textStyle?: TextStyle;
-}
-
-export function AvatarFallback({
-  children,
-  style,
-  textStyle,
-}: AvatarFallbackProps) {
-  const mutedColor = useColor('muted');
-  const mutedForegroundColor = useColor('mutedForeground');
-
-  return (
-    <View
-      style={[
-        {
-          width: '100%',
-          height: '100%',
-          backgroundColor: mutedColor,
-          alignItems: 'center',
-          justifyContent: 'center',
-        },
-        style,
-      ]}
-    >
-      <Text
-        style={[
-          {
-            color: mutedForegroundColor,
-            fontSize: FONT_SIZE,
-            fontWeight: '500',
-          },
-          textStyle,
-        ]}
-      >
-        {children}
-      </Text>
-    </View>
-  );
-}
-
+  return <Image source={source} style={[st
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -126,4 +84,4 @@ export function AvatarDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this avatar implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

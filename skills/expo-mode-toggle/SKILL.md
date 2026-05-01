@@ -14,6 +14,8 @@ A high-performance mode-toggle component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { Button, ButtonSize, ButtonVariant } from '@/components/ui/button';
 import { Icon } from '@/components/ui/icon';
@@ -46,31 +48,7 @@ export const ModeToggle = ({ variant = 'outline', size = 'icon' }: Props) => {
       runOnJS(setShowIcon)(isDark ? 'moon' : 'sun');
       scale.value = withTiming(1, { duration: 150 });
     });
-
-    // Only rotate when switching to sun (sun rays spinning effect)
-    if (!isDark) {
-      rotation.value = withTiming(rotation.value + 180, { duration: 300 });
-    }
-  }, [isDark]);
-
-  const animatedStyle = useAnimatedStyle(() => {
-    return {
-      transform: [
-        { rotate: showIcon === 'sun' ? `${rotation.value}deg` : '0deg' },
-        { scale: scale.value },
-      ],
-    };
-  });
-
-  return (
-    <Button variant={variant} size={size} onPress={toggleMode}>
-      <Animated.View style={animatedStyle}>
-        <Icon name={showIcon === 'moon' ? Moon : Sun} size={24} />
-      </Animated.View>
-    </Button>
-  );
-};
-
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -90,4 +68,4 @@ export function ModeToggleDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this mode-toggle implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

@@ -14,6 +14,8 @@ A high-performance useBottomTabOverflow hook for Expo and React Native applicati
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 
 // File: templates/hooks/useBottomTabOverflow.ts
@@ -34,4 +36,4 @@ export function useBottomTabOverflow() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this useBottomTabOverflow implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

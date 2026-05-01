@@ -14,6 +14,8 @@ A high-performance separator component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { View } from '@/components/ui/view';
 import { useColor } from '@/hooks/useColor';
@@ -73,4 +75,4 @@ export function SeparatorDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this separator implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

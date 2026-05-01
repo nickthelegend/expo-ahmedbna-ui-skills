@@ -14,6 +14,8 @@ A high-performance useColorScheme hook for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 
 // File: templates/hooks/useColorScheme.ts
@@ -53,4 +55,4 @@ export function useColorScheme() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this useColorScheme implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

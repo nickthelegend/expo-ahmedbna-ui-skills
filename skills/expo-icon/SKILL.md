@@ -14,6 +14,8 @@ A high-performance icon component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { useColor } from '@/hooks/useColor';
 import { LucideProps } from 'lucide-react-native';
@@ -70,4 +72,4 @@ export function IconDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this icon implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

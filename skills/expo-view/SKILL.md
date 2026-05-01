@@ -14,6 +14,8 @@ A high-performance view component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { forwardRef } from 'react';
 import { View as RNView, type ViewProps } from 'react-native';
@@ -60,4 +62,4 @@ export function ViewDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this view implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

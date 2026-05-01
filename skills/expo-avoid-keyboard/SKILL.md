@@ -14,6 +14,8 @@ A high-performance avoid-keyboard component for Expo and React Native applicatio
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { useKeyboardHeight } from '@/hooks/useKeyboardHeight';
 import { useEffect } from 'react';
@@ -43,28 +45,7 @@ export const AvoidKeyboard = ({ offset = 0, duration = 0 }: Props) => {
     // Only add offset when keyboard is visible
     const targetHeight = isKeyboardVisible ? keyboardHeight + offset : 0;
 
-    keyboardValue.value = withTiming(targetHeight, {
-      duration: keyboardAnimationDuration + duration,
-      easing,
-    });
-  }, [
-    keyboardHeight,
-    keyboardAnimationDuration,
-    isKeyboardVisible,
-    offset,
-    duration,
-  ]);
-
-  // Animated style
-  const keyboardMargin = useAnimatedStyle(() => {
-    return {
-      height: keyboardValue.value,
-    };
-  });
-
-  return <Animated.View style={keyboardMargin} />;
-};
-
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -95,18 +76,8 @@ export function AvoidKeyboardDemo() {
 
       <View style={{ flex: 1 }}>
         <Text>Keyboard Height: {keyboardHeight}</Text>
-        <Text>Keyboard Visible: {isKeyboardVisible ? 'Yes' : 'No'}</Text>
-        <Text>Animation Duration: {keyboardAnimationDuration}ms</Text>
-      </View>
-
-      <Input placeholder='Type your message here...' label='Message' />
-
-      {/* This will create space to avoid the keyboard */}
-      <AvoidKeyboard />
-    </View>
-  );
-}
-
+        <Text>Keyboa
+// ... (Code truncated, see references/ for full source)
 ```
 
 
@@ -115,4 +86,4 @@ export function AvoidKeyboardDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this avoid-keyboard implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

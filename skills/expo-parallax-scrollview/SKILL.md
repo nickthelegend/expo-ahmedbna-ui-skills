@@ -14,6 +14,8 @@ A high-performance parallax-scrollview component for Expo and React Native appli
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { View } from '@/components/ui/view';
 import { useBottomTabOverflow } from '@/hooks/useBottomTabOverflow';
@@ -47,60 +49,8 @@ export function ParallaxScrollView({
           translateY: interpolate(
             scrollOffset.value,
             [-headerHeight, 0, headerHeight],
-            [-headerHeight / 2, 0, headerHeight * 0.75]
-          ),
-        },
-        {
-          scale: interpolate(
-            scrollOffset.value,
-            [-headerHeight, 0, headerHeight],
-            [2, 1, 1]
-          ),
-        },
-      ],
-    };
-  });
-
-  return (
-    <View
-      style={{
-        flex: 1,
-      }}
-    >
-      <Animated.ScrollView
-        ref={scrollRef}
-        scrollEventThrottle={16}
-        scrollIndicatorInsets={{ bottom }}
-        contentContainerStyle={{ paddingBottom: bottom }}
-      >
-        <Animated.View
-          style={[
-            {
-              backgroundColor,
-              overflow: 'hidden',
-              height: headerHeight,
-            },
-            headerAnimatedStyle,
-          ]}
-        >
-          {headerImage}
-        </Animated.View>
-        <View
-          style={{
-            flex: 1,
-            padding: 32,
-            gap: 16,
-            overflow: 'hidden',
-            backgroundColor,
-          }}
-        >
-          {children}
-        </View>
-      </Animated.ScrollView>
-    </View>
-  );
-}
-
+            
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -130,21 +80,8 @@ export function ParallaxScrollViewDemo() {
         <Text>
           This is a basic example of a parallax scroll view. The header image
           moves at a different speed than the content as you scroll, creating a
-          beautiful parallax effect.
-        </Text>
-        <Text>
-          Scroll up and down to see the parallax animation in action. The header
-          will transform and scale based on your scroll position.
-        </Text>
-        <Text>
-          You can also try pulling down (over-scrolling) to see the header scale
-          up beyond its normal size.
-        </Text>
-      </View>
-    </ParallaxScrollView>
-  );
-}
-
+          beautif
+// ... (Code truncated, see references/ for full source)
 ```
 
 
@@ -153,4 +90,4 @@ export function ParallaxScrollViewDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this parallax-scrollview implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

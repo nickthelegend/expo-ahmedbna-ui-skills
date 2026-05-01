@@ -14,6 +14,8 @@ A high-performance useModeToggle hook for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 
 // File: templates/hooks/useModeToggle.tsx
@@ -53,22 +55,8 @@ export function useModeToggle(): UseModeToggleReturn {
   const setMode = (newMode: Mode) => {
     setModeState(newMode);
     if (newMode === 'system') {
-      Appearance.setColorScheme(null); // Reset to system default
-    } else {
-      Appearance.setColorScheme(newMode);
-    }
-  };
-
-  return {
-    isDark,
-    mode,
-    setMode,
-    currentMode: colorScheme,
-    toggleMode,
-  };
-}
-
-
+      Appearance.setColorScheme
+// ... (Code truncated, see references/ for full source)
 ```
 
 
@@ -78,4 +66,4 @@ export function useModeToggle(): UseModeToggleReturn {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this useModeToggle implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

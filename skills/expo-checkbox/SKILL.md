@@ -14,6 +14,8 @@ A high-performance checkbox component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { Text } from '@/components/ui/text';
 import { View } from '@/components/ui/view';
@@ -51,53 +53,8 @@ export function Checkbox({
         flexDirection: 'row',
         alignItems: 'center',
         opacity: disabled ? 0.5 : 1,
-        paddingVertical: 4,
-      }}
-      onPress={() => !disabled && onCheckedChange(!checked)}
-      disabled={disabled}
-    >
-      <View
-        style={{
-          width: BORDER_RADIUS,
-          height: BORDER_RADIUS,
-          borderRadius: BORDER_RADIUS,
-          borderWidth: 1.5,
-          borderColor: checked ? primary : borderColor,
-          backgroundColor: checked ? primary : 'transparent',
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginRight: label ? 8 : 0,
-        }}
-      >
-        {checked && (
-          <Check
-            size={16}
-            color={primaryForegroundColor}
-            strokeWidth={3}
-            strokeLinecap='round'
-          />
-        )}
-      </View>
-      {label && (
-        <Text
-          variant='caption'
-          numberOfLines={1}
-          ellipsizeMode='tail'
-          style={[
-            {
-              color: error ? danger : primary,
-            },
-            labelStyle,
-          ]}
-          pointerEvents='none'
-        >
-          {label}
-        </Text>
-      )}
-    </TouchableOpacity>
-  );
-}
-
+        paddi
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -125,4 +82,4 @@ export function CheckboxDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this checkbox implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

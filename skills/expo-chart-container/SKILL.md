@@ -14,6 +14,8 @@ A high-performance chart-container chart for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { Text } from '@/components/ui/text';
 import { View } from '@/components/ui/view';
@@ -57,12 +59,8 @@ export const ChartContainer = ({
         <Text variant='caption' style={{ marginBottom: 16 }}>
           {description}
         </Text>
-      )}
-      {children}
-    </View>
-  );
-};
-
+   
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -106,4 +104,4 @@ export function ChartContainerDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this chart-container implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

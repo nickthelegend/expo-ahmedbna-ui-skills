@@ -14,6 +14,8 @@ A high-performance skeleton component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { useColor } from '@/hooks/useColor';
 import { BORDER_RADIUS, CORNERS } from '@/theme/globals';
@@ -53,33 +55,8 @@ export function Skeleton({
   useEffect(() => {
     // We only define the animation going from 0.5 -> 1.
     // The `withRepeat` function will handle reversing it automatically.
-    opacity.value = withRepeat(
-      // Animate to an opacity of 1
-      withTiming(1, {
-        duration: 1000,
-        easing: Easing.inOut(Easing.quad),
-      }),
-      -1, // Loop infinitely
-      true // Set to true to automatically reverse the animation (yoyo effect)
-    );
-  }, []); // Use an empty dependency array as the shared value object is stable
-
-  return (
-    <Animated.View
-      style={[
-        {
-          width: width as any,
-          height,
-          backgroundColor: mutedColor,
-          borderRadius: variant === 'default' ? CORNERS : BORDER_RADIUS,
-        },
-        animatedStyle,
-        style,
-      ]}
-    />
-  );
-}
-
+    opacity.value = wi
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -99,4 +76,4 @@ export function SkeletonDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this skeleton implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

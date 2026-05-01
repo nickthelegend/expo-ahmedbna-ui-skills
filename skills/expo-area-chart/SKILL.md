@@ -14,6 +14,8 @@ A high-performance area-chart chart for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { LineChart } from '@/components/charts/line-chart';
 import { ViewStyle } from 'react-native';
@@ -100,4 +102,4 @@ export function AreaChartDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this area-chart implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

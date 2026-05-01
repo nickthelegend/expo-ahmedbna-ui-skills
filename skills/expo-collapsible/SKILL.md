@@ -14,6 +14,8 @@ A high-performance collapsible component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { Icon } from '@/components/ui/icon';
 import { Text } from '@/components/ui/text';
@@ -51,17 +53,8 @@ export function Collapsible({
       {isOpen && (
         <View
           style={{
-            marginTop: 6,
-            marginLeft: 24,
-          }}
-        >
-          {children}
-        </View>
-      )}
-    </View>
-  );
-}
-
+          
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -91,4 +84,4 @@ export function CollapsibleDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this collapsible implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

@@ -14,6 +14,8 @@ A high-performance card component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { Text } from '@/components/ui/text';
 import { View } from '@/components/ui/view';
@@ -57,75 +59,8 @@ interface CardHeaderProps {
   style?: ViewStyle;
 }
 
-export function CardHeader({ children, style }: CardHeaderProps) {
-  return <View style={[{ marginBottom: 8 }, style]}>{children}</View>;
-}
 
-interface CardTitleProps {
-  children: React.ReactNode;
-  style?: TextStyle;
-}
-
-export function CardTitle({ children, style }: CardTitleProps) {
-  return (
-    <Text
-      variant='title'
-      style={[
-        {
-          marginBottom: 4,
-        },
-        style,
-      ]}
-    >
-      {children}
-    </Text>
-  );
-}
-
-interface CardDescriptionProps {
-  children: React.ReactNode;
-  style?: TextStyle;
-}
-
-export function CardDescription({ children, style }: CardDescriptionProps) {
-  return (
-    <Text variant='caption' style={[style]}>
-      {children}
-    </Text>
-  );
-}
-
-interface CardContentProps {
-  children: React.ReactNode;
-  style?: ViewStyle;
-}
-
-export function CardContent({ children, style }: CardContentProps) {
-  return <View style={[style]}>{children}</View>;
-}
-
-interface CardFooterProps {
-  children: React.ReactNode;
-  style?: ViewStyle;
-}
-
-export function CardFooter({ children, style }: CardFooterProps) {
-  return (
-    <View
-      style={[
-        {
-          marginTop: 16,
-          flexDirection: 'row',
-          gap: 8,
-        },
-        style,
-      ]}
-    >
-      {children}
-    </View>
-  );
-}
-
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -174,4 +109,4 @@ export function CardDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this card implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."

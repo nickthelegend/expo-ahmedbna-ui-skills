@@ -14,6 +14,8 @@ A high-performance hello-wave component for Expo and React Native applications.
 ## Implementation
 
 ### Code
+Check the [references/](references/) directory for the full source code.
+
 ```tsx
 import { Text } from '@/components/ui/text';
 import { View } from '@/components/ui/view';
@@ -60,31 +62,8 @@ export function HelloWave({ children = '👋', size = 'md' }: HelloWaveProps) {
       ),
       4 // Run the animation 4 times
     );
-  }, [rotationAnimation]);
-
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [
-      {
-        rotate: `${rotationAnimation.value}deg`,
-      },
-    ],
-  }));
-
-  const sizeStyle = sizeVariants[size];
-
-  return (
-    <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-      <Animated.View style={animatedStyle}>
-        {typeof children === 'string' ? (
-          <Text style={sizeStyle}>{children}</Text>
-        ) : (
-          children
-        )}
-      </Animated.View>
-    </View>
-  );
-}
-
+  }, [rotationAnimation
+// ... (Code truncated, see references/ for full source)
 ```
 
 ## Usage Example
@@ -104,4 +83,4 @@ export function HellowWaveDemo() {
 - Use context-based state management where appropriate.
 
 ## AI Agent Prompt
-> "Act as a Senior Expo Developer. Review this hello-wave implementation and suggest optimizations."
+> "Act as a Senior Expo Developer. Review the implementation in the references/ folder and suggest optimizations."
